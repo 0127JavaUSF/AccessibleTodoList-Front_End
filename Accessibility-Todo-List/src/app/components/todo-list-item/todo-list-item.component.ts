@@ -24,7 +24,7 @@ export class TodoListItemComponent implements OnInit {
   ngOnInit() {
 
     if(this._listService.lists.length === 0) {
-      // the lists are not fetch. User probably refreshed the page while being at todo-list/:id
+      // the lists are not fetch. User probably refreshed the page while being at todo-list/:listId
       this._listService.fetchAllLists().subscribe(
         (data) => {
           this.fetchCurrentList();
@@ -40,7 +40,7 @@ export class TodoListItemComponent implements OnInit {
   }
 
   fetchCurrentList() {
-    this.currentList = this._listService.fetchListById(parseInt(this._activeRoute.snapshot.params['id']));
+    this.currentList = this._listService.fetchListById(parseInt(this._activeRoute.snapshot.params['listId']));
     
     if(this.currentList === null) {
       console.error("The list with such id cannot be found.");
@@ -49,6 +49,11 @@ export class TodoListItemComponent implements OnInit {
 
   handleGoBack() {
     this._router.navigateByUrl("todo-list");
+  }
+
+  navigateToItem(item: TodoListItem) {
+    const listId = this._activeRoute.snapshot.params['listId'];
+    this._router.navigate([`/todo-list/${listId}/item/${item.id}`]);
   }
 
 }

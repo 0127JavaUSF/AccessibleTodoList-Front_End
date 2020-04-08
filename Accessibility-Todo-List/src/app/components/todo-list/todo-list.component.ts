@@ -23,7 +23,7 @@ export class TodoListComponent implements OnInit {
     )
   }
 
-  navigateToItem(item: TodoListItem) {
+  navigateToList(item: TodoListItem) {
     this._router.navigate([`/todo-list/${item.id}`]);
     // this._router.navigateByUrl(`/todo-list/${item.id}`);
   }
