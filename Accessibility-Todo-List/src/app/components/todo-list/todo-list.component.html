@@ -1,1 +1,9 @@
-<p>todo-list works!</p>
+<div class="todo-list-container">
+
+    <div class="todo-list">
+        <ul *ngFor="let item of lists" (click)="navigateToItem(item)">
+            {{ item.title }}
+        </ul>
+    </div>
+
+</div>
