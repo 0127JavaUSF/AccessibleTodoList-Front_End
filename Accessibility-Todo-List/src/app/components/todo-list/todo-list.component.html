@@ -1,7 +1,7 @@
 <div class="todo-list-container">
 
     <div class="todo-list">
-        <ul *ngFor="let item of lists" (click)="navigateToItem(item)">
+        <ul *ngFor="let item of lists" (click)="navigateToList(item)">
             {{ item.title }}
         </ul>
     </div>

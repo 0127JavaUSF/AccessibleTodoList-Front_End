@@ -1,0 +1,21 @@
+<div class="list-item-container">
+    <div class="list-item-header-container">
+
+        <div class="list-item-back-button" (click)="handleGoBack()">
+            Back
+        </div>
+        <div class="list-item-header">
+            {{currentItem.title}}
+        </div>
+        <div class="list-item-due">
+            Due: {{currentItem.due | date}}
+        </div>
+        <div class="list-item-note">
+            {{currentItem.note}}
+        </div>
+        <div class="list-item-file">
+            {{currentItem.file}}
+        </div>
+        
+    </div>
+</div>

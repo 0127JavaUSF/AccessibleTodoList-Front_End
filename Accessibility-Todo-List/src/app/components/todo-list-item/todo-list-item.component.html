@@ -8,7 +8,7 @@
             {{currentList.title}}
         </div>
         <ol class="list-items-header" *ngFor="let item of currentList.items">
-            <li>
+            <li (click)="navigateToItem(item)">
                 {{item.title}}
             </li>
         </ol>
