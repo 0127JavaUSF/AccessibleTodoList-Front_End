@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoListService } from 'src/app/services/todo-list-service/todo-list.service';
 import { Router } from '@angular/router';
+import { TodoListItem } from 'src/app/models/todo-list-item';
 import { TodoList } from 'src/app/models/todo-list';
 
 @Component({
@@ -22,8 +23,7 @@ export class TodoListComponent implements OnInit {
     )
   }
 
-  navigateToItem(item: TodoList) {
-    console.log(item.id);
+  navigateToItem(item: TodoListItem) {
     this._router.navigate([`/todo-list/${item.id}`]);
     // this._router.navigateByUrl(`/todo-list/${item.id}`);
   }

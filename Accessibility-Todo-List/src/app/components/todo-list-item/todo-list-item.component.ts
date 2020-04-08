@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { TodoList } from 'src/app/models/todo-list';
+import { Component, OnInit } from '@angular/core';
+import { TodoListItem } from 'src/app/models/todo-list-item';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TodoListService } from 'src/app/services/todo-list-service/todo-list.service';
 
@@ -13,8 +13,8 @@ export class TodoListItemComponent implements OnInit {
   /**
    * @currentList is a list object that is currently being displayed
    */
-  @Input()
-  currentList: TodoList;
+
+  currentList: TodoListItem;
 
   constructor(private _activeRoute: ActivatedRoute,
     private _router: Router,
@@ -23,12 +23,28 @@ export class TodoListItemComponent implements OnInit {
 
   ngOnInit() {
 
-    // fetch List object based on ID from URL path
-    this.currentList = this._listService.fetchListById(this._activeRoute.snapshot.params['id']);
+    if(this._listService.lists.length === 0) {
+      // the lists are not fetch. User probably refreshed the page while being at todo-list/:id
+      this._listService.fetchAllLists().subscribe(
+        (data) => {
+          this.fetchCurrentList();
+        },
+        (error) => console.error(error)
+      )
+    } else {
+      // the lists are fetched. So we can simply look for specific list item
+      // fetch List object based on ID from URL path
+      this.fetchCurrentList();
+    }
+
+  }
+
+  fetchCurrentList() {
+    this.currentList = this._listService.fetchListById(parseInt(this._activeRoute.snapshot.params['id']));
+    
     if(this.currentList === null) {
       console.error("The list with such id cannot be found.");
     }
-
   }
 
   handleGoBack() {

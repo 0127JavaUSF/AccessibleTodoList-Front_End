@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { TodoListItem } from 'src/app/models/todo-list-item';
 import { TodoList } from 'src/app/models/todo-list';
 
 @Injectable({
@@ -21,14 +22,15 @@ export class TodoListService {
     
     // for now, let's keep it simple
 
-    const todoList1 = new TodoList(1, "Groceries", Date.now(), "", "");
-    const todoList2 = new TodoList(2, "Movies", Date.now(), "", "");
+    const todoListItem1 = new TodoListItem(1, "Buy apple", Date.now(), "", "");
+    const todoListItem2 = new TodoListItem(2, "Watch Shawshank Redemption", Date.now(), "", "");
+
+    const todoList1 = new TodoList(1, "Groceries", [todoListItem1]);
+    const todoList2 = new TodoList(2, "Movies", [todoListItem2]);
 
     // const tempList = ['Groceries', 'Movies', 'Work', 'Gym', 'Study'];
 
-    this.lists.push(todoList1);
-    this.lists.push(todoList2);
-
+    this.lists = [todoList1, todoList2];
 
     // this.lists = tempList;
 
@@ -36,18 +38,19 @@ export class TodoListService {
 
   }
 
-  fetchListById(id: number) {
+  fetchListById(id: number): TodoListItem {
 
     // let specifiedItem: TodoList;
 
+    let tempCurrentList = null;
+
     this.lists.forEach((item) => {
       if(item.id === id) {
-        return item;
+        tempCurrentList = item;
       }
     });
+    return tempCurrentList;
 
-    return null;
-
-  } 
+  }
 
 }

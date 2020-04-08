@@ -7,6 +7,11 @@
         <div class="list-item-header">
             {{currentList.title}}
         </div>
+        <ol class="list-items-header" *ngFor="let item of currentList.items">
+            <li>
+                {{item.title}}
+            </li>
+        </ol>
 
     </div>
 </div>
