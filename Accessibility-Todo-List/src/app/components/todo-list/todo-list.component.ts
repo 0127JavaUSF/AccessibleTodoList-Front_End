@@ -17,15 +17,25 @@ export class TodoListComponent implements OnInit {
     private _router: Router) { }
 
   ngOnInit() {
-    this._listService.fetchAllLists().subscribe(
-      (resultList) => this.lists = resultList,
-      (error) => console.error(error)
-    )
+    
+    if(this._listService.lists.length === 0) {
+      this._listService.fetchAllLists().subscribe(
+        (resultList) => this.lists = resultList,
+        (error) => console.error(error)
+      )
+    } else {
+      this.lists = this._listService.lists;
+    }
+    
   }
 
   navigateToList(item: TodoListItem) {
     this._router.navigate([`/todo-list/${item.id}`]);
     // this._router.navigateByUrl(`/todo-list/${item.id}`);
+  }
+
+  handleCreateListClick() {
+    this._router.navigate([`todo-list/create-list`]);
   }
 
 }

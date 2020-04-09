@@ -2,6 +2,6 @@
     cursor: pointer;
 }
 
-.list-items-header li:hover {
+.list-item-header-container ul:hover {
     cursor: pointer;
 }
