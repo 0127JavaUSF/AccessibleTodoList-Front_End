@@ -35,7 +35,7 @@ export class TodoListComponent implements OnInit {
   }
 
   handleCreateListClick() {
-    this._router.navigate([`todo-list/create-list`]);
+    this._router.navigate(["todo-list/create-list"]);
   }
 
 }
