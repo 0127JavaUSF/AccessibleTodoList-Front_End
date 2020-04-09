@@ -47,6 +47,11 @@ export class TodoListItemComponent implements OnInit {
     }
   }
 
+  handleCreateTodo() {
+    const listId = this._activeRoute.snapshot.params['listId'];
+    this._router.navigate([`/todo-list/${listId}/create-item`]);
+  }
+
   handleGoBack() {
     this._router.navigateByUrl("todo-list");
   }

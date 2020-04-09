@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { TodoListItem } from 'src/app/models/todo-list-item';
 import { TodoList } from 'src/app/models/todo-list';
+import { CreateItemObj } from 'src/app/models/create-item-obj';
 
 @Injectable({
   providedIn: 'root'
@@ -54,7 +55,7 @@ export class TodoListService {
   }
 
   fetchItemById(listId: number, itemId: number): TodoListItem {
-    console.log(listId + " " + itemId);
+
     let tempCurrentItem = null;
 
     this.lists.forEach((list) => {
@@ -70,6 +71,31 @@ export class TodoListService {
       }
     });
     return tempCurrentItem;
+
+  }
+
+  createList(list) {
+    // send this new list to the backend and fetch all lists and update the LISTS variable
+    
+    const newList = new TodoList(3, list.title, []);
+
+    // for now it is a push. Later, we fetch all lists from Backend
+    this.lists.push(newList);
+
+  }
+
+  createItem(listId: number, item: CreateItemObj) {
+    // send this new list to the backend and fetch all lists and update the LISTS variable
+    
+    const newItem = new TodoListItem(1, item.title, item.due, item.note, item.file);
+
+    // for now it is a push. Later, we fetch all lists from Backend
+    
+    this.lists.forEach((list) => {
+      if(list.id === listId) {
+        list.items.push(newItem);
+      }
+    })
 
   }
 
