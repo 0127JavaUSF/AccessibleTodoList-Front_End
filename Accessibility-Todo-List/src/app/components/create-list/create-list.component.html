@@ -2,9 +2,10 @@
     <div class="back-button" (click)="handleGoBack()">
         Back
     </div>
-    <div class="create-list-header">
+    <!-- <div class="create-list-header">
         List Name
-    </div>
-    <input [(ngModel)]="listName" value="listName" />
+    </div> -->
+    <label for="listName">List Name</label>
+    <input [(ngModel)]="listName" value="listName" id="listName" name="listName" />
     <button class="tick-button" (click)="handleCreateList()"> &#10004; </button>
 </div>
