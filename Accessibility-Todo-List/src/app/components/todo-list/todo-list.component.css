@@ -3,8 +3,12 @@
     border: 1px solid black;
 }
 
-.todo-list-container ul {
+.todo-list ul {
     margin: 10px;
     padding: 3px;
     border: 1px solid gray;
+}
+
+.todo-list ul:hover {
+    cursor: pointer;
 }

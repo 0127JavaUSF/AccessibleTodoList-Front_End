@@ -1,0 +1,7 @@
+.back-button:hover {
+    cursor: pointer;
+}
+
+.list-items-header li:hover {
+    cursor: pointer;
+}
