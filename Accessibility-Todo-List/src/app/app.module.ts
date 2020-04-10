@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderPanelComponent } from './header-panel/header-panel.component';
-import { MainLandingComponent } from './main-landing/main-landing.component';
+import { HeaderPanelComponent } from './components/header-panel/header-panel.component';
+import { MainLandingComponent } from './components/main-landing/main-landing.component';
 
 @NgModule({
   declarations: [
