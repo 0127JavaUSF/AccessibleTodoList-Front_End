@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Font-toggle.js"></script>
+    <!-- Computer Modern Font -->
+    <link rel="stylesheet" type="text/css"  href="http://spratt.github.io/Computer-Modern/cmsans.css" />
+</head>
+<body>
+    The purpose of this code is to toggle fonts to allow persons with Dyslexia to apply a font more adapted to their needs.
+    <br>
+
+    <button onclick=toArial()>Arial</button>
+    <button onclick=toComic()>Comic MS Sans</button>
+    <button onclick=toTahoma()>Tahoma</button>
+    <button onclick=toVerdana()>Verdana</button>
+
+    <br>
+    <div id='font_choices' role="Menu that allows a choice of font that might be more adapted to a perso who has dyslexia">
+        <div onclick=toArial() role="Opportunity to choose Arial as a font">Arial</div>
+        <div onclick=toComic()  role="Opportunity to choose Comic MS Sans as a font">Comic MS Sans</div>
+        <div onclick=toTahoma()  role="Opportunity to choose Tahoma as a font">Tahoma</div>
+        <div onclick=toVerdana()  role="Opportunity to choose Verdana as a font">Verdana</div>
+    </div>
+
+
+
+
+    <!-- List of fonts adapted for people with dyslexia: Helvetica, Courier, Arial, Verdana and Computer Modern Unicode, 
+        http://dyslexiahelp.umich.edu/sites/default/files/good_fonts_for_dyslexia_study.pdf -->
+        <!-- List of font-families that include fonts of help for persons with dyslexia  
+        https://www.w3.org/Style/Examples/007/fonts.en.html "Sans serif, roman and monospaced font types increased
+        the reading performance of our participants, while italic fonts did the opposite."-->
+
+        <!--
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
+            However, these properties don't produce a consistent result across browsers, 
+            and it is hard to do things like line different types of form element up with one another in a column. 
+            The <select> element's internal structure is complex, and hard to control. 
+            If you want to get full control, you should consider using a library with good facilities 
+            for styling form widgets, or try rolling your own dropdown menu using non-semantic elements,
+            JavaScript, and WAI-ARIA to provide semantics.
+        -->
+    
+        <!--
+        <list></list>
+        <datalist >
+            <option value="Arial,Sans-serif" style="font-family:'Arial,Sans-serif;"></option>
+            <option value="Computer Modern" style="font-family:'Computer Modern',sans-serif;"></option>
+            <option value="Courrier,monospace" style="font-family:Courrier,monospace;"></option>
+            <option value="Helvetica, sans-serif" style="font-family:Helvetica, sans-serif;"></option>
+            <option value="Verdana, sans-serif" style="font-family:Verdana, sans-serif;"></option>
+        </datalist>
+        -->
+    
+</body>
+</html>
