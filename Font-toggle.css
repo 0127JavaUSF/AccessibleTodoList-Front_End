@@ -2,10 +2,27 @@ body {
     font-family: Arial, Helvetica, sans-serif;      
 }
 
+#font_menu {
+    visibility: visible;
+}
 
-#fonts_choices > div {
-    background-color: #121fd3;
+.font_name {
+    width:10em;
     border: 0.1em;
-    border-radius: 4em;
+}
 
+#arial {
+    font-family:Arial,Sans-serif;
+}
+
+#comic {
+    font-family:"Comic Sans MS",sans-serif;
+}
+
+#tahoma {
+    font-family:Tahoma,sans-serif;
+}
+
+#verdana {
+    font-family:Verdana, sans-serif;
 }

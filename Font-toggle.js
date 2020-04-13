@@ -1,5 +1,17 @@
-function toggleFont(){
-    window.document.getElementsByTagName('body')[0].setAttribute("style","font-family:Comic Sans MS;");    
+let toToggle = true;
+
+function toggleMenu(){
+    
+    if (toToggle) {
+        window.document.getElementById("font_menu").setAttribute("style","visibility:hidden;");
+        window.document.getElementById("font_menu").setAttribute("style","background-color: blue;");
+        toToggle = false;
+    }
+    else  
+    {
+        window.document.getElementById("font_menu").setAttribute("style","visibility:visible;");
+        toToggle = true;
+    }
 }
 
 function toComic(){

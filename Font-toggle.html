@@ -7,6 +7,7 @@
     <script src="Font-toggle.js"></script>
     <!-- Computer Modern Font -->
     <link rel="stylesheet" type="text/css"  href="http://spratt.github.io/Computer-Modern/cmsans.css" />
+    <link rel="stylesheet" type="text/css"  href="./Font-toggle.css" />
 </head>
 <body>
     The purpose of this code is to toggle fonts to allow persons with Dyslexia to apply a font more adapted to their needs.
@@ -17,16 +18,16 @@
     <button onclick=toTahoma()>Tahoma</button>
     <button onclick=toVerdana()>Verdana</button>
 
-    <br>
-    <div id='font_choices' role="Menu that allows a choice of font that might be more adapted to a perso who has dyslexia">
-        <div onclick=toArial() role="Opportunity to choose Arial as a font">Arial</div>
-        <div onclick=toComic()  role="Opportunity to choose Comic MS Sans as a font">Comic MS Sans</div>
-        <div onclick=toTahoma()  role="Opportunity to choose Tahoma as a font">Tahoma</div>
-        <div onclick=toVerdana()  role="Opportunity to choose Verdana as a font">Verdana</div>
+    <br><br>
+    <div id="font_menu_toggle" onclick="toggleMenu()" role="Element to toggle to get to display the fonts to choose from when seeking to change the font displayed on the screen"> Area to click to toggle the menu </div>
+    <br><br>
+    <div id="font_menu"  role="Menu that allows a choice of font that might be more adapted to a perso who has dyslexia">
+        Please click on the name of the font you would like to apply to this page:
+        <div class="font_name" id="arial" onclick=toArial() role="Opportunity to choose Arial as a font">Arial</div>
+        <div class="font_name" id="comic" onclick=toComic()  role="Opportunity to choose Comic MS Sans as a font">Comic MS Sans</div>
+        <div class="font_name" id="tahoma"  onclick=toTahoma()  role="Opportunity to choose Tahoma as a font">Tahoma</div>
+        <div class="font_name" id="verdana"  onclick=toVerdana()  role="Opportunity to choose Verdana as a font">Verdana</div>
     </div>
-
-
-
 
     <!-- List of fonts adapted for people with dyslexia: Helvetica, Courier, Arial, Verdana and Computer Modern Unicode, 
         http://dyslexiahelp.umich.edu/sites/default/files/good_fonts_for_dyslexia_study.pdf -->
