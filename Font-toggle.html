@@ -10,14 +10,18 @@
     <link rel="stylesheet" type="text/css"  href="./Font-toggle.css" />
 </head>
 <body>
-    The purpose of this code is to toggle fonts to allow persons with Dyslexia to apply a font more adapted to their needs.
-    <br>
+    <!--  Skip to main content: helps screen readers pass navigation links   -->
+    <h3>1. Fonctionality: Ability to skip the navigation nenu</h3>
+    <a href="#MainContent">Skip to main content</a>
+    <a href="http://spratt.github.io/Computer-Modern/cmsans.css"> A link whose purpose is to be skipped </a>
+    <a href="http://spratt.github.io/Computer-Modern/cmsans.css"> A link whose purpose is to be skipped </a>
+    <a href="http://spratt.github.io/Computer-Modern/cmsans.css"> A link whose purpose is to be skipped </a>
+    <div style="height:75vh;" role="Div used to test the bookmark"> Element filling the page</div>
 
-    <button onclick=toArial()>Arial</button>
-    <button onclick=toComic()>Comic MS Sans</button>
-    <button onclick=toTahoma()>Tahoma</button>
-    <button onclick=toVerdana()>Verdana</button>
-
+    <!--  Skip to main content: helps screen readers pass navigation links   -->    
+    <div id="MainContent">
+        2. The purpose of this code is to toggle fonts to allow persons with Dyslexia to apply a font more adapted to their needs.
+    </div>    
     <br><br>
     <div id="font_menu_toggle" onclick="toggleMenu()" role="Element to toggle to get to display the fonts to choose from when seeking to change the font displayed on the screen"> Area to click to toggle the menu </div>
     <br><br>
@@ -28,6 +32,17 @@
         <div class="font_name" id="tahoma"  onclick=toTahoma()  role="Opportunity to choose Tahoma as a font">Tahoma</div>
         <div class="font_name" id="verdana"  onclick=toVerdana()  role="Opportunity to choose Verdana as a font">Verdana</div>
     </div>
+
+    <p>3. Feature: Increase of font size</p>
+    <div role="area to click to increase font size" onclick=increaseFontSize()>Click here to increase font size</div>
+    
+    <!--
+    <br>
+    <button onclick=toArial()>Arial</button>
+    <button onclick=toComic()>Comic MS Sans</button>
+    <button onclick=toTahoma()>Tahoma</button>
+    <button onclick=toVerdana()>Verdana</button>
+    -->
 
     <!-- List of fonts adapted for people with dyslexia: Helvetica, Courier, Arial, Verdana and Computer Modern Unicode, 
         http://dyslexiahelp.umich.edu/sites/default/files/good_fonts_for_dyslexia_study.pdf -->

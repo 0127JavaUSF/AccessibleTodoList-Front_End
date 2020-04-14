@@ -1,17 +1,24 @@
 let toToggle = true;
+let fontSize = 100;
+
 
 function toggleMenu(){
     
     if (toToggle) {
-        window.document.getElementById("font_menu").setAttribute("style","visibility:hidden;");
-        window.document.getElementById("font_menu").setAttribute("style","background-color: blue;");
+        window.document.getElementById("font_menu").setAttribute("style","visibility:visible;");
         toToggle = false;
     }
     else  
     {
-        window.document.getElementById("font_menu").setAttribute("style","visibility:visible;");
+        window.document.getElementById("font_menu").setAttribute("style","visibility:hidden;");
         toToggle = true;
     }
+}
+
+function increaseFontSize(){
+    fontSize += 20;
+    console.log(fontSize)
+    window.document.getElementsByTagName("body")[0].setAttribute("style",`font-size:${fontSize}%;`);
 }
 
 function toComic(){
