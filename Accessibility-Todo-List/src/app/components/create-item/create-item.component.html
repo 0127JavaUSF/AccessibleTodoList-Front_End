@@ -1,0 +1,14 @@
+<div class="create-item-container">
+    <div class="back-button" (click)="handleGoBack()">
+        Back
+    </div>
+    <div class="create-item-header">
+        Item Name
+    </div>
+    <input [(ngModel)]="itemName" value="itemName">
+    <input [(ngModel)]="itemDue" type="date">
+    <input [(ngModel)]="itemNote">
+    <button disabled> File Upload</button>
+
+    <button class="tick-button" (click)="handleCreateItem()"> &#10004; </button>
+</div>
