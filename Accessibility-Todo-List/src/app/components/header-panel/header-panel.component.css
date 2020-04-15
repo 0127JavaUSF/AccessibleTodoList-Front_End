@@ -1,0 +1,11 @@
+.wrapper 
+{
+    background-color: grey;
+}
+.button 
+{
+    padding-top: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
