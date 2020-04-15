@@ -18,7 +18,6 @@ export class LoginComponent implements OnInit {
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user';
-import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -92,6 +91,7 @@ export class LoginComponent implements OnInit {
       this.route.navigate(['search']);
 
     }, error => {
+      console.error(error);
       const test = 0;
     });
   }

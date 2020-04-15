@@ -15,15 +15,14 @@ import { ItemComponent } from './components/item/item.component';
 import { CreateListComponent } from './components/create-list/create-list.component';
 import { CreateItemComponent } from './components/create-item/create-item.component';
 
+import { HttpClientModule,HttpClient } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-
     HeaderPanelComponent,
-    MainLandingComponent
-
+    MainLandingComponent,
     LoginComponent,
     RegistrationComponent,
     TodoListComponent,
@@ -31,16 +30,15 @@ import { CreateItemComponent } from './components/create-item/create-item.compon
     ItemComponent,
     CreateListComponent,
     CreateItemComponent
-
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
 
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
