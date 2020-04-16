@@ -5,12 +5,11 @@
     background-image: url();
 }
 
-.dropdown
+.accessibility
 {
     background-color: grey;
 }
 
-#fontSizeButton
-{
-    background-color: grey;
-}
+.btn{background-color: grey;}
+
+.fontSize{background-color: grey;}

@@ -1,22 +1,22 @@
 <form>
-    <div class="container my-5">
+    <div class="container my-5" role="container for entering the user name and password">
         <h1 class="text-center"></h1>
-        <div class="form-group mx-auto w-50">
-            <div style="display:flex;">
-                <span class="hide">required</span>
+        <div class="form-group mx-auto w-50" role="another element in the container">
+            <div style="display:flex;" role="A structural element">
+                <span class="hide" role="User name is required"> required</span>
                 <input name="User" [(ngModel)]="username" id="username_text" class="form-control my-3"
                     placeholder="Username" type="text" (change)="validateUsername()">
-                <span id="username_required" [class]="usernameClass">required</span> </div>
-            <div style="display:flex;">
-                <span class="hide">required</span>
+                <span id="username_required" role="User name is required" [class]="usernameClass">required</span> </div>
+            <div style="display:flex;" role="A structural element">
+                <span class="hide" role="User password is required">required</span>
                 <input name="Userpassword" [(ngModel)]="password" id="password_text" class="form-control my-3"
                     placeholder="Password" type="password" (change)="validatePassword()">
-                <span id="password_required" [class]="passwordClass">required</span>
+                <span id="password_required" role="User password is required" [class]="passwordClass">required</span>
             </div>
-            <div class="text-center">
+            <div class="text-center" role="A structural element">
                 <input id="login_button" (click)="onSubmit()" class="btn btn-primary btn-lg revature_orange w-25"
                     type="submit" value="Login">
-                <div id="login_error" [class]="loginClass">{{errorMess}}</div>
+                <div id="login_error" [class]="loginClass" role="A structural element">{{errorMess}}</div>
             </div>
         </div>
     </div>
