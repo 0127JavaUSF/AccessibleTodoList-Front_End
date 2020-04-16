@@ -15,14 +15,24 @@ import { ItemComponent } from './components/item/item.component';
 import { CreateListComponent } from './components/create-list/create-list.component';
 import { CreateItemComponent } from './components/create-item/create-item.component';
 
+<<<<<<< HEAD
 import { HttpClientModule,HttpClient } from '@angular/common/http';
+=======
+>>>>>>> 7b13deb2ecc1ad47dc8c412630d825eb941f7d03
 
 
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
     HeaderPanelComponent,
     MainLandingComponent,
+=======
+
+    HeaderPanelComponent,
+    MainLandingComponent
+
+>>>>>>> 7b13deb2ecc1ad47dc8c412630d825eb941f7d03
     LoginComponent,
     RegistrationComponent,
     TodoListComponent,
@@ -30,15 +40,26 @@ import { HttpClientModule,HttpClient } from '@angular/common/http';
     ItemComponent,
     CreateListComponent,
     CreateItemComponent
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7b13deb2ecc1ad47dc8c412630d825eb941f7d03
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+<<<<<<< HEAD
     HttpClientModule,
 
   ],
   providers: [HttpClient],
+=======
+
+  ],
+  providers: [],
+>>>>>>> 7b13deb2ecc1ad47dc8c412630d825eb941f7d03
   bootstrap: [AppComponent]
 })
 export class AppModule { }
