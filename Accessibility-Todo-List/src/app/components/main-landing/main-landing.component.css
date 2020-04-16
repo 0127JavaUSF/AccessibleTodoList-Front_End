@@ -5,10 +5,7 @@
     background-image: url();
 }
 
-.accessibility
-{
-    background-color: grey;
-}
+.accessibility{background-color: #767676; color:black;}
 
 .btn{background-color: grey;}
 
