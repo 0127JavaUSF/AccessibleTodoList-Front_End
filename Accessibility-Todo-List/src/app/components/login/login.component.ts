@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user';
-import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -67,15 +66,19 @@ export class LoginComponent implements OnInit {
     let user = new User();
     user.username = this.username;
     user.password = this.password;
-
+    //JL: commented; back-end not yet pushed on github
+    /* 
     this.userService.login(user).subscribe(data => {
       const newUser = data;
+    
 
       //route to search page by default
       this.route.navigate(['search']);
 
     }, error => {
+      console.error(error);
       const test = 0;
-    });
+    });*/ 
+    this.route.navigate(['todo-list']);
   }
 }

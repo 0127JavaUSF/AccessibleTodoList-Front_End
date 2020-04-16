@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderPanelComponent } from './components/header-panel/header-panel.component';
+import { HttpClientModule,HttpClient } from '@angular/common/http';
 import { MainLandingComponent } from './components/main-landing/main-landing.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
@@ -34,8 +35,10 @@ import { CreateItemComponent } from './components/create-item/create-item.compon
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
+
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

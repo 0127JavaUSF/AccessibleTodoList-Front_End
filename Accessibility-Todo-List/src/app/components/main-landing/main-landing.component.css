@@ -4,3 +4,13 @@
     padding-top: 100px;
     background-image: url();
 }
+
+.dropdown
+{
+    background-color: grey;
+}
+
+#fontSizeButton
+{
+    background-color: grey;
+}
