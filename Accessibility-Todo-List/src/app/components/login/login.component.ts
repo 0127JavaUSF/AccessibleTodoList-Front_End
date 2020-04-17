@@ -67,7 +67,8 @@ export class LoginComponent implements OnInit {
     user.username = this.username;
     user.password = this.password;
     //JL: commented; back-end not yet pushed on github
-    /* 
+    /*
+    console.log(user);
     this.userService.login(user).subscribe(data => {
       const newUser = data;
     
@@ -78,7 +79,8 @@ export class LoginComponent implements OnInit {
     }, error => {
       console.error(error);
       const test = 0;
-    });*/ 
+    });
+    */
     this.route.navigate(['todo-list']);
   }
 }
