@@ -10,6 +10,7 @@ import { RegistrationComponent } from 'src/app/components/registration/registrat
 
 
 
+
 // these are routes (constants)
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: "todo-list/:listId", component: TodoListItemComponent},
   {path: "todo-list/:listId/item/:itemId", component: ItemComponent},
   {path: "todo-list/:listId/create-item", component: CreateItemComponent},
+  {path: "register", component: RegistrationComponent},
   {path: "", component: LoginComponent},
   {path: "registration", component: RegistrationComponent},
 
