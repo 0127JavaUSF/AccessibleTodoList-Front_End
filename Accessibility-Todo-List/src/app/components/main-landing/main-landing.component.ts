@@ -27,7 +27,7 @@ export class MainLandingComponent implements OnInit {
   toVerdana(){
     window.document.getElementsByTagName('body')[0].setAttribute("style","font-family:Verdana, sans-serif;");    
   }
-/*
+
   private fontSize = 100;
   increaseFontSize(){
       this.fontSize += 20;      
@@ -38,7 +38,7 @@ export class MainLandingComponent implements OnInit {
       this.fontSize -= 20;
       window.document.getElementsByTagName("body")[0].setAttribute("style",`font-size:${this.fontSize}%;`);
   }
-*/
+
 
 
 
