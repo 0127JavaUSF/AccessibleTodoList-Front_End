@@ -1,6 +1,6 @@
 
 <div class="accessibility" role="Dropdown menu used to change the font-family">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button [attr.aria-label]="AButtonUsedToChangeTheFontOnThePage" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Click on the button to select a different font for the text
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" role="An element of the Dropdown menu">
@@ -10,8 +10,8 @@
       <a class="dropdown-item" href="#" (click)=toVerdana()>Verdana, sans-serif;</a>
     </div>
 
-    <button type="button" id="increaseFont" class="btn btn-secondary" (click)=increaseFontSize()>Click to increase the font size</button>
-    <button type="button" id="decreaseFont" class="btn btn-secondary" (click)=decreaseFontSize()>Click to decrease the font size</button>
+    <button [attr.aria-label]="AButtonUsedToIncreaseTheSizeOfTheFontOnThePage" type="button" id="increaseFont" class="btn btn-secondary" (click)=increaseFontSize()>Click to increase the font size</button>
+    <button [attr.aria-label]="AButtonUsedToDecreaseTheSizeOfTheFontOnThePage" type="button" id="decreaseFont" class="btn btn-secondary" (click)=decreaseFontSize()>Click to decrease the font size</button>
 </div>
 
 <!-- JL: modifiying code for screen reader accessibility -->
