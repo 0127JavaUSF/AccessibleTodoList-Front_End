@@ -12,12 +12,12 @@ export class UserService {
   constructor(private http: HttpClient) {}
 
   login(user: Object): Observable<Object> {
-   //return this.http.post(`${this.baseUrl}/login.app`, user);
-   
-   let httpHeaders = new HttpHeaders();
-   httpHeaders.set('Content-Type','application/json');
-   httpHeaders.set('Return-Type','application/json');
-   let options = {headers:httpHeaders};
+   // return this.http.post(`${this.baseUrl}/login.app`, user);
+
+   const httpHeaders = new HttpHeaders();
+   httpHeaders.set('Content-Type', 'application/json');
+   httpHeaders.set('Return-Type', 'application/json');
+   const options = {headers: httpHeaders};
    return this.http.post(`${this.baseUrl}/login.app`, user, options);
   }
 }

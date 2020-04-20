@@ -15,19 +15,19 @@ export class ItemComponent implements OnInit {
   currentItem: TodoListItem;
 
   constructor(private _listService: TodoListService,
-    private _activeRoute: ActivatedRoute,
-    private _router: Router,
+              private _activeRoute: ActivatedRoute,
+              private _router: Router,
     ) { }
 
   ngOnInit() {
-    if(this._listService.lists.length === 0) {
+    if (this._listService.lists.length === 0) {
       // the lists are not fetch. User probably refreshed the page while being at todo-list/:listId
       this._listService.fetchAllLists().subscribe(
         (data) => {
           this.fetchCurrentItem();
         },
         (error) => console.error(error)
-      )
+      );
     } else {
       // the lists are fetched. So we can simply look for specific list item
       // fetch List object based on ID from URL path
@@ -37,19 +37,19 @@ export class ItemComponent implements OnInit {
 
   fetchCurrentItem() {
 
-    const listId = parseInt(this._activeRoute.snapshot.params['listId']);
-    const itemId = parseInt(this._activeRoute.snapshot.params['itemId']);
+    const listId = parseInt(this._activeRoute.snapshot.params.listId);
+    const itemId = parseInt(this._activeRoute.snapshot.params.itemId);
 
     this.currentItem = this._listService.fetchItemById(listId, itemId);
-    
-    if(this.currentItem === null) {
-      console.error("The item with such id cannot be found.");
+
+    if (this.currentItem === null) {
+      console.error('The item with such id cannot be found.');
     }
 
   }
 
   handleGoBack() {
-    const listId = this._activeRoute.snapshot.params['listId'];
+    const listId = this._activeRoute.snapshot.params.listId;
     this._router.navigate([`/todo-list/${listId}`]);
   }
 

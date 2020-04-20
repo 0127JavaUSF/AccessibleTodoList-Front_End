@@ -15,14 +15,14 @@ import { RegistrationComponent } from 'src/app/components/registration/registrat
 
 const routes: Routes = [
 
-  {path: "todo-list", component: TodoListComponent},
-  {path: "todo-list/create-list", component: CreateListComponent},
-  {path: "todo-list/:listId", component: TodoListItemComponent},
-  {path: "todo-list/:listId/item/:itemId", component: ItemComponent},
-  {path: "todo-list/:listId/create-item", component: CreateItemComponent},
-  {path: "register", component: RegistrationComponent},
-  {path: "", component: LoginComponent},
-  {path: "registration", component: RegistrationComponent},
+  {path: 'todo-list', component: TodoListComponent},
+  {path: 'todo-list/create-list', component: CreateListComponent},
+  {path: 'todo-list/:listId', component: TodoListItemComponent},
+  {path: 'todo-list/:listId/item/:itemId', component: ItemComponent},
+  {path: 'todo-list/:listId/create-item', component: CreateItemComponent},
+  {path: 'register', component: RegistrationComponent},
+  {path: '', component: LoginComponent},
+  {path: 'registration', component: RegistrationComponent},
 
 ];
 
