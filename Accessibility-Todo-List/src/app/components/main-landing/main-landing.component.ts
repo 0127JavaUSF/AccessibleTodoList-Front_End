@@ -9,34 +9,34 @@ export class MainLandingComponent implements OnInit {
 
   constructor() { }
 
+  private fontSize = 100;
+
   ngOnInit() {
   }
 
-  toArial(){
-    window.document.getElementsByTagName('body')[0].setAttribute("style","font-family:Arial,Sans-serif;");    
+  toArial() {
+    window.document.getElementsByTagName('body')[0].setAttribute('style', 'font-family:Arial,Sans-serif;');
   }
 
-  toCourier(){
-    window.document.getElementsByTagName('body')[0].setAttribute("style","font-family:Courier;monospace");    
+  toCourier() {
+    window.document.getElementsByTagName('body')[0].setAttribute('style', 'font-family:Courier;monospace');
   }
 
- toHelvetica(){
-    window.document.getElementsByTagName('body')[0].setAttribute("style","font-family:Helvetica, sans-serif;");    
+ toHelvetica() {
+    window.document.getElementsByTagName('body')[0].setAttribute('style', 'font-family:Helvetica, sans-serif;');
   }
 
-  toVerdana(){
-    window.document.getElementsByTagName('body')[0].setAttribute("style","font-family:Verdana, sans-serif;");    
+  toVerdana() {
+    window.document.getElementsByTagName('body')[0].setAttribute('style', 'font-family:Verdana, sans-serif;');
+  }
+  increaseFontSize() {
+      this.fontSize += 20;
+      window.document.getElementsByTagName('body')[0].setAttribute('style', `font-size:${this.fontSize}%;`);
   }
 
-  private fontSize = 100;
-  increaseFontSize(){
-      this.fontSize += 20;      
-      window.document.getElementsByTagName("body")[0].setAttribute("style",`font-size:${this.fontSize}%;`);
-  }
-
-  decreaseFontSize(){
+  decreaseFontSize() {
       this.fontSize -= 20;
-      window.document.getElementsByTagName("body")[0].setAttribute("style",`font-size:${this.fontSize}%;`);
+      window.document.getElementsByTagName('body')[0].setAttribute('style', `font-size:${this.fontSize}%;`);
   }
 
 
