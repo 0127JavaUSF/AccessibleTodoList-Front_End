@@ -1,5 +1,5 @@
 <form>
-    <div class="container my-5" role="form">
+    <div class="container my-5" role="form" aria-label="Form for entering the username and password">
         <!--<h1 class="text-center"></h1>-->
         <div class="form-group mx-auto w-50" role="group">
             <div style="display:flex;" role="group">
@@ -10,13 +10,14 @@
             <div style="display:flex;" role="group">
                 <span class="hide" role="note">required</span>
                 <input name="Userpassword" [(ngModel)]="password" id="password_text" class="form-control my-3"
-                    placeholder="Password" type="password" (change)="validatePassword()" aria-label="input field for the user name">
+                    placeholder="Password" type="password" (change)="validatePassword()" aria-label="input field for the password">
                 <span id="password_required" role="note" [class]="passwordClass">required</span>
             </div>
             <div class="text-center" role="group">
-                <input id="login_button" (click)="onSubmit()" class="btn btn-primary btn-lg revature_orange w-25"
-                    type="submit" value="Login" method="POST">
-                <div id="login_error" [class]="loginClass" role="status">{{errorMess}}</div>
+                <!-- JL: button color modified to solve an accessibility contrast issue  -->
+                <input id="login_button" (click)="onSubmit()" class="btn btn-secondary btn-lg revature_orange w-25"
+                    type="submit" value="Login" method="POST" aria-label="Button to click to send the username and password information">
+                <div id="login_error" [class]="loginClass" role="status" aria-hidden="true">{{errorMess}}</div>
             </div>
         </div>
     </div>
