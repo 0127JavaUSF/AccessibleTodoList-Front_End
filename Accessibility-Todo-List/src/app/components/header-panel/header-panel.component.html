@@ -4,7 +4,7 @@
             <p>Daily</p>
             <div class ="row">
                 <!--  JL: modified column sizes to make the inteface react more nicely to font increase  -->
-                <div id='date' class = "col-4">
+                <div id='date' class = "col-4" aria-label="Today's date">
                     <p>{{date}}</p> <!-- Use of Interpolation -->
                 </div>
                 <div id='Weather' class = "col-4">
@@ -15,13 +15,13 @@
         </div>
 
         <div class="col-2">
-            <p class ="button">
+            <p class ="button" >
                <!-- LogIn -->
-               <button ngbDropdownItem routerLink="registration">Register</button>
+               <button ngbDropdownItem routerLink="registration" role="button" aria-label="Button to click to go to the registration page">Register</button>
             </p>
         </div>
 
-        <div class="col-2">
+        <div class="col-2" role="note">
             <p class = "button">
                 Try It Free
             </p> 
