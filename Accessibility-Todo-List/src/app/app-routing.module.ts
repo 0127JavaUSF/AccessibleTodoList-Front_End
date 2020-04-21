@@ -7,6 +7,7 @@ import { ItemComponent } from './components/item/item.component';
 import { CreateListComponent } from './components/create-list/create-list.component';
 import { CreateItemComponent } from './components/create-item/create-item.component';
 import { RegistrationComponent } from 'src/app/components/registration/registration.component';
+import { MainLandingComponent } from './components/main-landing/main-landing.component';
 
 
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: "todo-list/:listId/create-item", component: CreateItemComponent},
   {path: "", component: LoginComponent},
   {path: "registration", component: RegistrationComponent},
+  {path: "main-landing", component: MainLandingComponent},
 
 ];
 
