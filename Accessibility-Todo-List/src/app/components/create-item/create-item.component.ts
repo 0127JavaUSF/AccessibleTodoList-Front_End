@@ -10,10 +10,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class CreateItemComponent implements OnInit {
 
-  itemName: String = '';
+  itemName: string = '';
   itemDue = 0;
-  itemNote: String = '';
-  itemFile: String = '';
+  itemNote: string = '';
+  itemFile: string = '';
 
   constructor(private _listService: TodoListService,
               private _router: Router,
@@ -25,6 +25,7 @@ export class CreateItemComponent implements OnInit {
 
   handleCreateItem() {
 
+    // tslint:disable-next-line: radix
     const listId = parseInt(this._activeRoute.snapshot.params.listId);
     const newItem = new CreateItemObj(this.itemName, this.itemDue, this.itemNote, this.itemFile);
 
