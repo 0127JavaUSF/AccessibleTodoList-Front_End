@@ -1,21 +1,33 @@
 
-<div class="accessibility" role="Dropdown menu used to change the font-family">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div class="accessibility" aria-label="A Set of Functionalities enhancing the accessibility of the page">
+    <button aria-expanded="false"  [attr.aria-label]="Button" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Click on the button to select a different font for the text
     </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" role="An element of the Dropdown menu">
-      <a class="dropdown-item" href="#" (click)=toArial() > Arial,Sans-serif</a>
-      <a class="dropdown-item" href="#" (click)=toCourier() > Courrier,monospace;</a>
-      <a class="dropdown-item" href="#" (click)=toHelvetica()>Helvetica, sans-serif;</a>
-      <a class="dropdown-item" href="#" (click)=toVerdana()>Verdana, sans-serif;</a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" role="menuitem" href="#" (click)=toArial() > Arial,Sans-serif</a>
+      <a class="dropdown-item" role="menuitem" href="#" (click)=toCourier() > Courrier,monospace;</a>
+      <a class="dropdown-item" role="menuitem" href="#" (click)=toHelvetica()>Helvetica, sans-serif;</a>
+      <a class="dropdown-item" role="menuitem" href="#" (click)=toVerdana()>Verdana, sans-serif;</a>
     </div>
 
-    <button type="button" id="increaseFont" class="btn btn-secondary" (click)=increaseFontSize()>Click to increase the font size</button>
-    <button type="button" id="decreaseFont" class="btn btn-secondary" (click)=decreaseFontSize()>Click to decrease the font size</button>
+    <button role="button" [attr.aria-label]="AButtonUsedToIncreaseTheSizeOfTheFontOnThePage" type="button" id="increaseFont" class="btn btn-secondary" (click)=increaseFontSize()>Click to increase the font size</button>
+    <button role="button" [attr.aria-label]="AButtonUsedToDecreaseTheSizeOfTheFontOnThePage" type="button" id="decreaseFont" class="btn btn-secondary" (click)=decreaseFontSize()>Click to decrease the font size</button>
 </div>
 
-<h1 class = "welcome">
-    Welcome to Accessible To do Application
+<!-- JL: modifiying code for screen reader accessibility -->
+<h1 class = "welcome" aria-label="Welcome Message">
+    <pre>
+     Welcome.
+     This ToDo List Application
+     has been developed with
+     Accessibility in mind.
+     <img src="../../../assets/rev-logo-2.png" alt="Revature's logo" height="60px" width="60px">
+    </pre>
 </h1>
 
-<p style="text-align: center; font-size: large;">Try it for free</p>
+
+<!-- <p style="text-align: center; font-size: large;">Try it for free</p>-->
+
+<!-- JL: modifiying code for accessibility -->
+<h2 style="text-align: center">Try it for free</h2>
+

@@ -1,7 +1,13 @@
 .wrapper 
 {
     background-color: grey;
+    
 }
+
+#Register{
+    text-align: right;
+}
+
 .button 
 {
     padding-top: 25px;
@@ -11,3 +17,5 @@
 }
 
 #daily_weather_date{color:#14181c;}
+
+

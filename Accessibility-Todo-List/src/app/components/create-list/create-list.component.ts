@@ -10,17 +10,17 @@ import { Router } from '@angular/router';
 })
 export class CreateListComponent implements OnInit {
 
-  listName: String = "";
+  listName: String = '';
 
   constructor(private _listService: TodoListService,
-    private _router: Router,
+              private _router: Router,
     ) { }
 
   ngOnInit() {
   }
 
   handleCreateList() {
-    
+
     const newList = new CreateListObj(this.listName);
 
     this._listService.createList(newList);

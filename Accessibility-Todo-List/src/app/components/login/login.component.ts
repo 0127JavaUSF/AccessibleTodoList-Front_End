@@ -10,17 +10,17 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  username: string = '';
-  password: string = '';
+  username = '';
+  password = '';
 
   usernameClass: string;
   passwordClass: string;
-  hide: string = "error hide my-auto";
-  dontHide: string = "error my-auto";
+  hide = 'error hide my-auto';
+  dontHide = 'error my-auto';
 
   constructor(
     private route: Router,
-    private userService: UserService) { };
+    private userService: UserService) { }
 
   ngOnInit(): void {
 
@@ -34,8 +34,7 @@ export class LoginComponent implements OnInit {
 
       this.passwordClass = this.dontHide;
       return false;
-    }
-    else {
+    } else {
       this.passwordClass = this.hide;
       return true;
     }
@@ -47,8 +46,7 @@ export class LoginComponent implements OnInit {
 
       this.usernameClass = this.dontHide;
       return false;
-    }
-    else {
+    } else {
       this.usernameClass = this.hide;
       return true;
     }
@@ -56,22 +54,22 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
 
-    //if username or password empty
+    // if username or password empty
     const isPWValid = this.validatePassword();
     const isUserValid = this.validateUsername();
-    if(!isPWValid || !isUserValid) {
+    if (!isPWValid || !isUserValid) {
       return;
     }
 
-    let user = new User();
+    const user = new User();
     user.username = this.username;
     user.password = this.password;
-    //JL: commented; back-end not yet pushed on github
+    // JL: commented; back-end not yet pushed on github
     /*
     console.log(user);
     this.userService.login(user).subscribe(data => {
       const newUser = data;
-    
+
 
       //route to search page by default
       this.route.navigate(['search']);

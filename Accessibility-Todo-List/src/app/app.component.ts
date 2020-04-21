@@ -9,14 +9,14 @@ export class AppComponent {
   title = 'Accessibility-Todo-List';
 
   private fontSize = 100;
-  increaseFontSize(){
-      this.fontSize += 20;      
-      window.document.getElementsByTagName("body")[0].setAttribute("style",`font-size:${this.fontSize}%;`);
+  increaseFontSize() {
+      this.fontSize += 20;
+      window.document.getElementsByTagName('body')[0].setAttribute('style', `font-size:${this.fontSize}%;`);
   }
 
-  decreaseFontSize(){
+  decreaseFontSize() {
       this.fontSize -= 20;
-      window.document.getElementsByTagName("body")[0].setAttribute("style",`font-size:${this.fontSize}%;`);
+      window.document.getElementsByTagName('body')[0].setAttribute('style', `font-size:${this.fontSize}%;`);
   }
 }
 

@@ -10,22 +10,23 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class CreateItemComponent implements OnInit {
 
-  itemName: String = "";
-  itemDue: number = 0;
-  itemNote: String = "";
-  itemFile: String = "";
+  itemName: string = '';
+  itemDue = 0;
+  itemNote: string = '';
+  itemFile: string = '';
 
   constructor(private _listService: TodoListService,
-    private _router: Router,
-    private _activeRoute: ActivatedRoute,
+              private _router: Router,
+              private _activeRoute: ActivatedRoute,
     ) { }
 
   ngOnInit() {
   }
 
   handleCreateItem() {
-    
-    const listId = parseInt(this._activeRoute.snapshot.params['listId']);
+
+    // tslint:disable-next-line: radix
+    const listId = parseInt(this._activeRoute.snapshot.params.listId);
     const newItem = new CreateItemObj(this.itemName, this.itemDue, this.itemNote, this.itemFile);
 
 
@@ -37,7 +38,7 @@ export class CreateItemComponent implements OnInit {
 
   handleGoBack() {
 
-    const listId = this._activeRoute.snapshot.params['listId'];
+    const listId = this._activeRoute.snapshot.params.listId;
     this._router.navigate([`/todo-list/${listId}`]);
 
   }

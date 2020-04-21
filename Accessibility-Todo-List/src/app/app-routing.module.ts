@@ -11,9 +11,11 @@ import { MainLandingComponent } from './components/main-landing/main-landing.com
 
 
 
+
 // these are routes (constants)
 
 const routes: Routes = [
+
 
   {path: "todo-list", component: TodoListComponent},
   {path: "todo-list/create-list", component: CreateListComponent},

@@ -1,22 +1,27 @@
 <form>
-    <div class="container my-5" role="container for entering the user name and password">
+    <div class="container my-5" role="form" aria-label="Form for entering the username and password">
         <!--<h1 class="text-center"></h1>-->
-        <div class="form-group mx-auto w-50" role="another element in the container">
-            <div style="display:flex;" role="A structural element">
-                <span class="hide" role="User name is required"> required</span>
-                <input name="User" [(ngModel)]="username" id="username_text" class="form-control my-3"
-                    placeholder="Username" type="text" (change)="validateUsername()" aria-label="input field for the user name">
-                <span id="username_required" role="User name is required" [class]="usernameClass">required</span> </div>
-            <div style="display:flex;" role="A structural element">
-                <span class="hide" role="User password is required">required</span>
-                <input name="Userpassword" [(ngModel)]="password" id="password_text" class="form-control my-3"
-                    placeholder="Password" type="password" (change)="validatePassword()" aria-label="input field for the user name">
-                <span id="password_required" role="User password is required" [class]="passwordClass">required</span>
+        <div class="form-group mx-auto w-50" role="group">
+            <div style="display:flex;" role="group">
+                <span class="hide" role="note"> required</span>
+                <input  aria-required="true" aria-invalid="false" name="User" [(ngModel)]="username" id="username_text" class="form-control my-3"
+                    placeholder="Username" type="text" (change)="validateUsername()" aria-label="Input field for the user name">
+                <span id="username_required" role="note" [class]="usernameClass">required</span> </div>
+            <div style="display:flex;" role="group">
+                <span class="hide" role="note">required</span>
+                <input aria-required="true"  aria-invalid="false" name="Userpassword" [(ngModel)]="password" id="password_text" class="form-control my-3"
+                    placeholder="Password" type="password" (change)="validatePassword()" aria-label="Input field for the password">
+                <span id="password_required" role="note" [class]="passwordClass">required</span>
             </div>
-            <div class="text-center" role="A structural element">
-                <input id="login_button" (click)="onSubmit()" class="btn btn-primary btn-lg revature_orange w-25"
-                    type="submit" value="Login" method="POST">
-                <div id="login_error" [class]="loginClass" role="A structural element">{{errorMess}}</div>
+            <div class="text-center" role="group">
+                <!-- JL: button color modified to solve an accessibility contrast issue  -->
+                <input id="login_button" (click)="onSubmit()" class="btn btn-secondary btn-lg revature_orange w-25"
+                    type="submit" value="Login" method="POST" aria-label="Button to click to send the username and password information">
+                    <!--https://www.w3.org/TR/wai-aria/#aria-errormessage-->
+                    <!-- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute -->
+                    <div role="alert" aria-errormessage="login_error" >
+                        <div id="login_error" [class]="loginClass" role="status">{{errorMess}}</div>
+                    </div>
             </div>
         </div>
     </div>

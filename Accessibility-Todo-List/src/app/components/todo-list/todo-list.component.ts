@@ -13,20 +13,20 @@ export class TodoListComponent implements OnInit {
 
   lists: Array<TodoList> = [];
 
-  constructor(private _listService: TodoListService, 
-    private _router: Router) { }
+  constructor(private _listService: TodoListService,
+              private _router: Router) { }
 
   ngOnInit() {
-    
-    if(this._listService.lists.length === 0) {
+
+    if (this._listService.lists.length === 0) {
       this._listService.fetchAllLists().subscribe(
         (resultList) => this.lists = resultList,
         (error) => console.error(error)
-      )
+      );
     } else {
       this.lists = this._listService.lists;
     }
-    
+
   }
 
   navigateToList(item: TodoListItem) {
@@ -35,7 +35,7 @@ export class TodoListComponent implements OnInit {
   }
 
   handleCreateListClick() {
-    this._router.navigate(["todo-list/create-list"]);
+    this._router.navigate(['todo-list/create-list']);
   }
 
 }

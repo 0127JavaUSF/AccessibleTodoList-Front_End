@@ -1,12 +1,13 @@
 <div class="wrapper">
     <div class ="row">
         <div id="daily_weather_date" class="col-8">
-            <p>Daily</p>
+            <p role="note" >Daily</p>
             <div class ="row">
-                <div id='date' class = "col-2">
-                    <p>Date</p>
+                <!--  JL: modified column sizes to make the inteface react more nicely to font increase  -->
+                <div id='date' class = "col-4" aria-label="Today's date">
+                    <p>{{date}}</p> <!-- Use of Interpolation -->
                 </div>
-                <div id='Weather' class = "col-2">
+                <div id='Weather' class = "col-4" aria-label="The weather forecast" aria-live="assertive">
                     <p>Weather</p>
                 </div>
 
@@ -14,6 +15,7 @@
         </div>
 
         <div class="col-2">
+
             <p class ="button">
                <!-- Register -->
               <button ngbDropdownItem routerLink="registration">Register</button>
@@ -24,10 +26,15 @@
             <p class ="button">
                <!-- LogIn -->
                <button ngbDropdownItem routerLink="/">Login</button>
+
+        <!--    <p class ="button" >
+               <!-- LogIn -->
+               <button ngbDropdownItem routerLink="registration" aria-label="Button to click to go to the registration page">Register</button>
+        -->
             </p>
         </div>
 
-        <div class="col-2">
+        <div class="col-2" role="note">
             <p class = "button">
                 Try It Free
             </p> 
