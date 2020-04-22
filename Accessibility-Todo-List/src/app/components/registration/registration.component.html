@@ -3,14 +3,16 @@
     <div class="col-md-4 mb-3">
       <label for="validationServer01">First name</label>
       <input type="text" class="form-control is-valid" id="validationServer01" value="" required>
-      <div class="valid-feedback">
+      <div class="valid-feedback, valid-feedback-style"> 
+        <!-- Modified the font color, according to pa11y's suggestion for an appropriate contrast ratio -->
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationServer02">Last name</label>
       <input type="text" class="form-control is-valid" id="validationServer02" value="" required>
-      <div class="valid-feedback">
+      <div class="valid-feedback, valid-feedback-style">
+        <!-- Modified the font color, according to pa11y's suggestion for an appropriate contrast ratio -->
         Looks good!
       </div>
     </div>
@@ -48,5 +50,6 @@
       </div>
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit</button>
+  <!-- Modified the button color for appropriate contrast ratio -->
+  <button class="btn btn-secondary" type="submit">Submit</button>
 </form>
