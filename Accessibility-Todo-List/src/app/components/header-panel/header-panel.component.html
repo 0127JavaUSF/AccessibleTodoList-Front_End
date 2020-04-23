@@ -1,13 +1,14 @@
 <div class="wrapper">
     <div class ="row">
         <div id="daily_weather_date" class="col-8">
-            <p aria-label="The name of the service"> Daily</p>
+            <!-- https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets  -->
+            <p aria-label="The name of the service" tabindex="0"> Daily</p>
             <div class ="row">
                 <!--  JL: modified column sizes to make the inteface react more nicely to font increase  -->
-                <div id='date' class = "col-4" aria-label="Today's date">
+                <div id='date' class = "col-4" aria-label="Today's date" tabindex="0">
                     <p>{{date}}</p> <!-- Use of Interpolation -->
                 </div>
-                <div id='Weather' class = "col-4" aria-label="The weather forecast" aria-live="assertive">
+                <div id='Weather' class = "col-4" aria-label="The weather forecast" aria-live="assertive" tabindex="0">
                     <p>Weather</p>
                 </div>
 
