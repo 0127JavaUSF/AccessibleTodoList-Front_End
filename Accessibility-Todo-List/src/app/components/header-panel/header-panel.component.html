@@ -14,32 +14,44 @@
             </div>
         </div>
 
-        <div class="col-2">
+        <!--<div class="col-2">
 
             <p class ="button">
-               <!-- Register -->
+                Register
               <button role="button" ngbDropdownItem routerLink="registration" id="RegistrationButton">Register</button>
             </p>
+        </div> -->
+
+        <div class="col-2">
+            <p class ="button">
+               <!-- LogIn -->
+               <button style = "float: right" role="button" aria-roledescription="Button to click to access the login form"   ngbDropdownItem routerLink="/" aria-label="The button to click on to login">Login</button>
+
+        <!--    <p class ="button" >
+               Register
+               <button role="button" aria-roledescription="Button to click to create a free account" ngbDropdownItem routerLink="registration" aria-label="The button to click on to create an account to use the service">Register</button>
+        
+            </p> -->
         </div>
 
         <div class="col-2">
             <p class ="button">
                <!-- LogIn -->
-               <button role="button" aria-roledescription="Button to click to access the login form"   ngbDropdownItem routerLink="/" aria-label="The button to click on to login">Login</button>
+               <!-- <button role="button" aria-roledescription="Button to click to access the login form"   ngbDropdownItem routerLink="/" aria-label="The button to click on to login">Login</button>  -->
 
         <!--    <p class ="button" > -->
                <!-- Register -->
-               <button role="button" aria-roledescription="Button to click to create a free account" ngbDropdownItem routerLink="registration" aria-label="The button to click on to create an account to use the service">Register</button>
+               <button style = "float: left" role="button" aria-roledescription="Button to click to create a free account" ngbDropdownItem routerLink="registration" aria-label="The button to click on to create an account to use the service">Register</button>
         
             </p>
         </div>
 
-        <div class="col-2" role="note">
-            <!--  https://www.w3.org/WAI/GL/wiki/Using_aria-flowto   -->
+       <!---- <div class="col-2" role="note">
+             https://www.w3.org/WAI/GL/wiki/Using_aria-flowto 
             <p class = "button" aria-label="An invitation to create an account for free and to use the service" aria-flowto="RegistrationButton">
                 Try It Free
             </p> 
-        </div>
+        </div> -->
         
     </div>
 </div>
